@@ -19,6 +19,17 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        
+        // Productivity Theme Colors
+        'productive-purple': "hsl(var(--productive-purple))",
+        'productive-blue': "hsl(var(--productive-blue))",
+        'productive-success': "hsl(var(--productive-success))",
+        'productive-warning': "hsl(var(--productive-warning))",
+        
+        // Surface Colors
+        'surface-primary': "hsl(var(--surface-primary))",
+        'surface-secondary': "hsl(var(--surface-secondary))",
+        'surface-elevated': "hsl(var(--surface-elevated))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -84,6 +95,13 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "float": "float 6s ease-in-out infinite",
+        "glow": "glow 2s ease-in-out infinite alternate",
+      },
+      backgroundImage: {
+        'gradient-primary': 'var(--gradient-primary)',
+        'gradient-secondary': 'var(--gradient-secondary)',
+        'gradient-hero': 'var(--gradient-hero)',
       },
     },
   },

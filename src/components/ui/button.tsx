@@ -15,11 +15,17 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // Productivity App Variants
+        hero: "bg-gradient-hero text-white hover:opacity-90 animate-glow font-semibold shadow-lg hover:shadow-xl transition-all duration-300",
+        productivity: "bg-productive-purple text-white hover:bg-productive-blue transition-all duration-300 font-medium",
+        success: "bg-productive-success text-white hover:bg-productive-success/90 font-medium",
+        glass: "glass-effect text-white hover:bg-white/20 transition-all duration-300 border-white/30",
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
+        xl: "h-14 rounded-lg px-10 text-lg",
         icon: "h-10 w-10",
       },
     },
