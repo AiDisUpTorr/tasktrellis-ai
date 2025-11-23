@@ -59,7 +59,7 @@ const Dashboard = () => {
   return (
     <div className="min-h-screen bg-gradient-secondary py-8">
       <div className="container mx-auto px-4 max-w-7xl">
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center justify-between mb-8 animate-fade-in">
           <Button 
             variant="ghost" 
             onClick={() => navigate('/professional-setup')}
@@ -76,13 +76,17 @@ const Dashboard = () => {
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Main Schedule */}
           <div className="lg:col-span-2 space-y-6">
-            <Card className="p-6">
+            <Card className="glass-card p-6 animate-slide-in-left hover-lift">
               <h2 className="text-2xl font-bold mb-6">Today's Schedule</h2>
               <div className="space-y-4">
-                {tasks.map((task) => (
-                  <div key={task.id} className="flex items-center justify-between p-4 border rounded-lg hover:bg-muted/30 transition-colors">
+                {tasks.map((task, index) => (
+                  <div 
+                    key={task.id} 
+                    className="flex items-center justify-between p-4 border rounded-lg hover:bg-muted/30 transition-all duration-300 hover:shadow-md animate-fade-in hover-lift"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
                     <div className="flex items-center space-x-4">
-                      <CheckCircle className="text-muted-foreground hover:text-productive-success cursor-pointer" size={20} />
+                      <CheckCircle className="text-muted-foreground hover:text-productive-success cursor-pointer transition-colors hover:scale-110" size={20} />
                       <div>
                         <h3 className="font-medium">{task.title}</h3>
                         <p className="text-sm text-muted-foreground">{task.time}</p>
@@ -96,9 +100,9 @@ const Dashboard = () => {
               </div>
             </Card>
 
-            <Card className="p-6">
+            <Card className="glass-card p-6 animate-scale-in hover-lift" style={{ animationDelay: '0.4s' }}>
               <h3 className="text-lg font-semibold mb-4">Your AI Schedule</h3>
-              <div className="bg-muted/30 p-4 rounded-lg">
+              <div className="bg-muted/30 p-4 rounded-lg backdrop-blur-sm">
                 <pre className="text-sm whitespace-pre-wrap text-muted-foreground">
                   {schedule.slice(0, 500)}...
                 </pre>
@@ -109,16 +113,16 @@ const Dashboard = () => {
           {/* Sidebar */}
           <div className="space-y-6">
             {/* Pomodoro Timer */}
-            <Card className="p-6 text-center">
+            <Card className="glass-card p-6 text-center animate-slide-in-right hover-lift">
               <h3 className="text-lg font-semibold mb-4">Pomodoro Timer</h3>
-              <div className="text-4xl font-bold text-productive-purple mb-4">
+              <div className="text-4xl font-bold text-productive-purple mb-4 animate-glow">
                 {formatTime(pomodoroTime)}
               </div>
               <p className="text-sm text-muted-foreground mb-6">{currentTask}</p>
               <Button 
                 variant={isRunning ? "outline" : "productivity"}
                 onClick={() => setIsRunning(!isRunning)}
-                className="w-full"
+                className="w-full hover:scale-105 transition-transform"
               >
                 {isRunning ? (
                   <>
@@ -135,7 +139,7 @@ const Dashboard = () => {
             </Card>
 
             {/* Performance Stats */}
-            <Card className="p-6">
+            <Card className="glass-card p-6 animate-fade-in hover-lift" style={{ animationDelay: '0.2s' }}>
               <h3 className="text-lg font-semibold mb-4">Today's Progress</h3>
               <div className="space-y-4">
                 <div className="flex justify-between">
@@ -154,7 +158,7 @@ const Dashboard = () => {
             </Card>
 
             {/* Focus Tips */}
-            <Card className="p-6">
+            <Card className="glass-card p-6 animate-fade-in hover-lift" style={{ animationDelay: '0.3s' }}>
               <h3 className="text-lg font-semibold mb-4">Focus Tips</h3>
               <div className="space-y-3 text-sm text-muted-foreground">
                 <p>• Use the Pomodoro technique: 25 min work, 5 min break</p>
