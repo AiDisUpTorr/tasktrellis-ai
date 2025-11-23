@@ -54,13 +54,13 @@ const ProfessionalSetup = () => {
           <Button 
             variant="ghost" 
             onClick={() => navigate('/task-manager')}
-            className="mb-8 text-muted-foreground hover:text-foreground"
+            className="mb-8 text-muted-foreground hover:text-foreground animate-fade-in"
           >
             <ArrowLeft className="mr-2" size={16} />
             Back to Selection
           </Button>
 
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 animate-fade-in-up">
             <Badge variant="secondary" className="mb-4">
               <Bot className="mr-1" size={12} />
               Step 1 of 2
@@ -75,7 +75,7 @@ const ProfessionalSetup = () => {
 
           <div className="grid gap-6 mb-12">
             {aiTools.map((tool, index) => (
-              <Card key={index} className="p-6 hover:shadow-lg transition-all duration-300">
+              <Card key={index} className="glass-card p-6 hover:shadow-lg transition-all duration-300 hover-lift animate-slide-in-left" style={{ animationDelay: `${index * 0.1}s` }}>
                 <div className="flex items-center justify-between">
                   <div className="flex-1">
                     <h3 className="text-xl font-semibold mb-2">{tool.name}</h3>
@@ -85,6 +85,7 @@ const ProfessionalSetup = () => {
                     variant="outline" 
                     size="sm"
                     onClick={() => window.open(tool.url, '_blank')}
+                    className="hover:scale-105 transition-transform"
                   >
                     Open {tool.name}
                     <ExternalLink className="ml-2" size={14} />
@@ -94,7 +95,7 @@ const ProfessionalSetup = () => {
             ))}
           </div>
 
-          <Card className="p-6 bg-muted/30">
+          <Card className="glass-card p-6 animate-scale-in" style={{ animationDelay: '0.4s' }}>
             <h3 className="font-semibold mb-4">💡 Pro Tip:</h3>
             <p className="text-muted-foreground mb-4">
               Ask the AI to create a detailed schedule with:
@@ -107,11 +108,12 @@ const ProfessionalSetup = () => {
             </ul>
           </Card>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-12 animate-fade-in" style={{ animationDelay: '0.5s' }}>
             <Button 
               variant="productivity" 
               size="lg"
               onClick={() => setStep(2)}
+              className="hover:scale-105 transition-transform"
             >
               I've Created My Schedule
               <ArrowLeft className="ml-2 rotate-180" size={16} />
@@ -128,13 +130,13 @@ const ProfessionalSetup = () => {
         <Button 
           variant="ghost" 
           onClick={() => setStep(1)}
-          className="mb-8 text-muted-foreground hover:text-foreground"
+          className="mb-8 text-muted-foreground hover:text-foreground animate-fade-in"
         >
           <ArrowLeft className="mr-2" size={16} />
           Back to AI Tools
         </Button>
 
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 animate-fade-in-up">
           <Badge variant="secondary" className="mb-4">
             <Clipboard className="mr-1" size={12} />
             Step 2 of 2
@@ -147,7 +149,7 @@ const ProfessionalSetup = () => {
           </p>
         </div>
 
-        <Card className="p-8">
+        <Card className="glass-card p-8 animate-scale-in">
           <div className="space-y-6">
             <div>
               <Label htmlFor="schedule" className="text-lg font-semibold">
@@ -168,7 +170,7 @@ Example:
 ..."
                 value={schedule}
                 onChange={(e) => setSchedule(e.target.value)}
-                className="min-h-[300px] text-sm"
+                className="min-h-[300px] text-sm transition-all duration-300 focus:ring-2 focus:ring-primary/20"
               />
             </div>
 
@@ -178,7 +180,7 @@ Example:
                 size="xl"
                 onClick={handleBuildSchedule}
                 disabled={isProcessing}
-                className="min-w-[200px]"
+                className="min-w-[200px] hover:scale-105 transition-transform"
               >
                 {isProcessing ? (
                   <>

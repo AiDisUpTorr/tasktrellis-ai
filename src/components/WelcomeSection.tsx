@@ -31,8 +31,8 @@ const WelcomeSection = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-16 flex flex-col items-center justify-center min-h-screen text-center">
         {/* Main Heading */}
-        <div className="mb-8 animate-float">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
+        <div className="mb-8 animate-fade-in-up">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 animate-float">
             Welcome To Your
           </h1>
           <h2 className="text-4xl md:text-6xl font-bold gradient-text bg-white">
@@ -41,7 +41,7 @@ const WelcomeSection = () => {
         </div>
 
         {/* Inspirational Quote */}
-        <Card className="glass-effect p-6 mb-12 max-w-2xl">
+        <Card className="glass-effect p-6 mb-12 max-w-2xl animate-scale-in hover-lift" style={{ animationDelay: '0.2s' }}>
           <div className="flex items-start space-x-4">
             <Quote className="text-white/80 mt-1 flex-shrink-0" size={24} />
             <p className="text-white/90 text-lg italic leading-relaxed">
@@ -52,20 +52,20 @@ const WelcomeSection = () => {
 
         {/* Features Preview */}
         <div className="grid md:grid-cols-3 gap-6 mb-12 max-w-4xl">
-          <Card className="glass-effect p-6 text-center">
-            <Target className="text-white mx-auto mb-4" size={32} />
+          <Card className="glass-effect p-6 text-center hover-lift animate-slide-in-left" style={{ animationDelay: '0.3s' }}>
+            <Target className="text-white mx-auto mb-4 animate-float" size={32} />
             <h3 className="text-white font-semibold mb-2">Smart Scheduling</h3>
             <p className="text-white/80 text-sm">AI-powered schedule creation and optimization</p>
           </Card>
           
-          <Card className="glass-effect p-6 text-center">
-            <CheckCircle className="text-white mx-auto mb-4" size={32} />
+          <Card className="glass-effect p-6 text-center hover-lift animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <CheckCircle className="text-white mx-auto mb-4 animate-float" style={{ animationDelay: '1s' }} size={32} />
             <h3 className="text-white font-semibold mb-2">Task Management</h3>
             <p className="text-white/80 text-sm">Professional and personal task organization</p>
           </Card>
           
-          <Card className="glass-effect p-6 text-center">
-            <Quote className="text-white mx-auto mb-4" size={32} />
+          <Card className="glass-effect p-6 text-center hover-lift animate-slide-in-right" style={{ animationDelay: '0.5s' }}>
+            <Quote className="text-white mx-auto mb-4 animate-float" style={{ animationDelay: '2s' }} size={32} />
             <h3 className="text-white font-semibold mb-2">Focus Techniques</h3>
             <p className="text-white/80 text-sm">Pomodoro and distraction-free workspace</p>
           </Card>
@@ -75,7 +75,8 @@ const WelcomeSection = () => {
         <Button 
           variant="hero" 
           size="xl" 
-          className="group"
+          className="group animate-scale-in"
+          style={{ animationDelay: '0.6s' }}
           onClick={() => window.location.href = '/task-manager'}
         >
           Create Task Manager

@@ -11,7 +11,7 @@ const TaskManagerSelector = () => {
     <div className="min-h-screen bg-gradient-secondary py-16">
       <div className="container mx-auto px-4 max-w-4xl">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 animate-fade-in-up">
           <Button 
             variant="ghost" 
             onClick={() => navigate('/')}
@@ -32,14 +32,14 @@ const TaskManagerSelector = () => {
         {/* Options */}
         <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
           {/* Professional Option */}
-          <Card className="p-8 hover:shadow-xl transition-all duration-300 border-2 hover:border-productive-purple/30 group cursor-pointer"
+          <Card className="glass-card p-8 hover:shadow-xl transition-all duration-300 border-2 hover:border-productive-purple/30 group cursor-pointer hover-lift animate-slide-in-left"
                 onClick={() => navigate('/professional-setup')}>
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-productive-purple/10 rounded-full mb-6 group-hover:bg-productive-purple/20 transition-colors">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-productive-purple/10 rounded-full mb-6 group-hover:bg-productive-purple/20 transition-colors group-hover:scale-110 duration-300">
                 <Briefcase className="text-productive-purple" size={32} />
               </div>
               
-              <Badge variant="secondary" className="mb-4">
+              <Badge variant="secondary" className="mb-4 animate-fade-in" style={{ animationDelay: '0.1s' }}>
                 <Sparkles className="mr-1" size={12} />
                 AI-Powered
               </Badge>
@@ -62,21 +62,21 @@ const TaskManagerSelector = () => {
                 </div>
               </div>
               
-              <Button variant="productivity" size="lg" className="w-full">
+              <Button variant="productivity" size="lg" className="w-full group-hover:scale-105 transition-transform">
                 Choose Professional
               </Button>
             </div>
           </Card>
 
           {/* Personal Option */}
-          <Card className="p-8 hover:shadow-xl transition-all duration-300 border-2 hover:border-productive-blue/30 group cursor-pointer"
+          <Card className="glass-card p-8 hover:shadow-xl transition-all duration-300 border-2 hover:border-productive-blue/30 group cursor-pointer hover-lift animate-slide-in-right"
                 onClick={() => navigate('/personal-setup')}>
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-productive-blue/10 rounded-full mb-6 group-hover:bg-productive-blue/20 transition-colors">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-productive-blue/10 rounded-full mb-6 group-hover:bg-productive-blue/20 transition-colors group-hover:scale-110 duration-300">
                 <Home className="text-productive-blue" size={32} />
               </div>
               
-              <Badge variant="secondary" className="mb-4">
+              <Badge variant="secondary" className="mb-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
                 Coming Soon
               </Badge>
               
