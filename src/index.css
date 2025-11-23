@@ -6,24 +6,24 @@
 
 @layer base {
   :root {
-    /* Core Colors - Productivity Theme */
-    --background: 245 15% 97%;
-    --foreground: 222 47% 11%;
+    /* Core Colors - #71a1b3 Theme */
+    --background: 196 15% 97%;
+    --foreground: 196 47% 11%;
     
     /* Gradient Backgrounds */
-    --gradient-primary: linear-gradient(135deg, hsl(174 62% 47%), hsl(184 65% 60%));
-    --gradient-secondary: linear-gradient(135deg, hsl(174 30% 88%), hsl(180 35% 92%));
-    --gradient-hero: linear-gradient(135deg, hsl(174 62% 47%) 0%, hsl(184 65% 60%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(196 30% 57%), hsl(196 40% 67%));
+    --gradient-secondary: linear-gradient(135deg, hsl(196 20% 88%), hsl(196 25% 92%));
+    --gradient-hero: linear-gradient(135deg, hsl(196 35% 50%) 0%, hsl(196 40% 67%) 100%);
     
     /* Productivity Colors */
-    --productive-purple: 174 62% 47%;
-    --productive-blue: 184 65% 60%;
+    --productive-purple: 196 30% 57%;
+    --productive-blue: 196 40% 67%;
     --productive-success: 142 69% 58%;
     --productive-warning: 45 93% 47%;
     
     /* Surface Colors */
     --surface-primary: 0 0% 100%;
-    --surface-secondary: 245 20% 96%;
+    --surface-secondary: 196 20% 96%;
     --surface-elevated: 0 0% 100%;
 
     --card: 0 0% 100%;
@@ -32,16 +32,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 174 62% 47%;
+    --primary: 196 30% 57%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 174 20% 93%;
-    --secondary-foreground: 180 47% 15%;
+    --secondary: 196 20% 93%;
+    --secondary-foreground: 196 47% 15%;
 
-    --muted: 174 15% 94%;
-    --muted-foreground: 180 20% 50%;
+    --muted: 196 15% 94%;
+    --muted-foreground: 196 20% 50%;
 
-    --accent: 184 65% 60%;
+    --accent: 196 40% 67%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
