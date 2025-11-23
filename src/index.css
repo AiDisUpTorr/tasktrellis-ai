@@ -11,13 +11,13 @@
     --foreground: 222 47% 11%;
     
     /* Gradient Backgrounds */
-    --gradient-primary: linear-gradient(135deg, hsl(258 100% 75%), hsl(208 100% 75%));
-    --gradient-secondary: linear-gradient(135deg, hsl(245 60% 88%), hsl(235 60% 92%));
-    --gradient-hero: linear-gradient(135deg, hsl(258 90% 65%) 0%, hsl(208 90% 70%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(174 62% 47%), hsl(184 65% 60%));
+    --gradient-secondary: linear-gradient(135deg, hsl(174 30% 88%), hsl(180 35% 92%));
+    --gradient-hero: linear-gradient(135deg, hsl(174 62% 47%) 0%, hsl(184 65% 60%) 100%);
     
     /* Productivity Colors */
-    --productive-purple: 258 100% 75%;
-    --productive-blue: 208 100% 75%;
+    --productive-purple: 174 62% 47%;
+    --productive-blue: 184 65% 60%;
     --productive-success: 142 69% 58%;
     --productive-warning: 45 93% 47%;
     
@@ -32,16 +32,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 258 100% 75%;
+    --primary: 174 62% 47%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 245 20% 96%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 174 20% 93%;
+    --secondary-foreground: 180 47% 15%;
 
-    --muted: 245 15% 94%;
-    --muted-foreground: 222 25% 55%;
+    --muted: 174 15% 94%;
+    --muted-foreground: 180 20% 50%;
 
-    --accent: 208 100% 75%;
+    --accent: 184 65% 60%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
